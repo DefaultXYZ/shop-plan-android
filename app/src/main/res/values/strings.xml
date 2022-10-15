@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shop Plan</string>
+    <string name="nav_plan_list">Plan</string>
+    <string name="nav_product_list">Products</string>
+    <string name="nav_profile">Profile</string>
+    <string name="toolbar_plan_list">Your plan lists</string>
+    <string name="toolbar_product_list">Product catalog</string>
+    <string name="toolbar_profile">Profile</string>
+</resources>
