@@ -1,7 +1,8 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id(Plugins.androidApplication)
+    id(Plugins.kotlin)
+    id(Plugins.kotlinKapt)
+    id(Plugins.googleServices)
 }
 
 android {
@@ -55,11 +56,19 @@ dependencies {
     implementation(Dependencies.Android.lifecycleRuntime)
     implementation(Dependencies.Android.activityCompose)
     implementation(Dependencies.Android.navigationCompose)
+
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.foundation)
     implementation(Dependencies.Compose.uiTooling)
     implementation(Dependencies.Compose.material)
+
+    implementation(platform(Dependencies.Firebase.firebaseBom))
+    implementation(Dependencies.Firebase.firebaseAuth)
+    implementation(Dependencies.Firebase.firebaseStorage)
+    implementation(Dependencies.Firebase.firestore)
+
     testImplementation(Dependencies.Test.junit)
+
     androidTestImplementation(Dependencies.AndroidTest.androidJunit)
     androidTestImplementation(Dependencies.AndroidTest.espresso)
     androidTestImplementation(Dependencies.Compose.uiTest)

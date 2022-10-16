@@ -1,10 +1,10 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
-    id("com.android.application").version("7.3.0").apply(false)
-    id("com.android.library").version("7.3.0").apply(false)
-    id("org.jetbrains.kotlin.android").version("1.7.20").apply(false)
-    id("com.github.ben-manes.versions")
+    id(Plugins.androidApplication).version(Plugins.Version.androidGradle).apply(false)
+    id(Plugins.androidLibrary).version(Plugins.Version.androidGradle).apply(false)
+    id(Plugins.kotlin).version(Plugins.Version.kotlinAndroid).apply(false)
+    id(Plugins.dependencyUpdates)
 }
 
 tasks.withType<DependencyUpdatesTask> {

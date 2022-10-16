@@ -6,6 +6,7 @@ object Versions {
     const val lifecycleRuntime = "2.5.1"
     const val activityCompose = "1.6.0"
     const val navigationCompose = "2.5.2"
+    const val firebase = "30.5.0"
 
     // Tests
     const val junit = "4.13.2"
@@ -32,6 +33,13 @@ object Modules {
         const val uiTooling = "androidx.compose.ui:ui-tooling"
     }
 
+    object Firebase {
+        const val firebaseBom = "com.google.firebase:firebase-bom"
+        const val firebaseAuth = "com.google.firebase:firebase-auth-ktx"
+        const val firebaseStorage = "com.google.firebase:firebase-storage-ktx"
+        const val firestore = "com.google.firebase:firebase-firestore-ktx"
+    }
+
     object Test {
         const val junit = "junit:junit"
     }
@@ -56,6 +64,13 @@ object Dependencies {
         const val material = "${Modules.Compose.material}:${Versions.compose}"
         const val uiTest = "${Modules.Compose.uiTest}:${Versions.compose}"
         const val uiTooling = "${Modules.Compose.uiTooling}:${Versions.compose}"
+    }
+
+    object Firebase {
+        const val firebaseBom = "${Modules.Firebase.firebaseBom}:${Versions.firebase}"
+        const val firebaseAuth = Modules.Firebase.firebaseAuth
+        const val firebaseStorage = Modules.Firebase.firebaseStorage
+        const val firestore = Modules.Firebase.firestore
     }
 
     object Test {
