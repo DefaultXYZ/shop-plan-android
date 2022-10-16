@@ -9,12 +9,6 @@ plugins {
 
 tasks.withType<DependencyUpdatesTask> {
     rejectVersionIf {
-        !isLibraryVersionStable(candidate.version)
+        !isLibraryVersionStable()
     }
-}
-
-fun isLibraryVersionStable(version: String): Boolean {
-    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
-    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
-    return stableKeyword || regex.matches(version)
 }
