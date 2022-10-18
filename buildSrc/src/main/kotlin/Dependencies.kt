@@ -7,9 +7,11 @@ object Versions {
     const val activityCompose = "1.6.0"
     const val navigationCompose = "2.5.2"
     const val firebase = "30.5.0"
+    const val jodaTime = "2.12.0"
 
     // Tests
     const val junit = "4.13.2"
+    const val mockito = "4.0.0"
 
     // Android Tests
     const val androidJunit = "1.1.3"
@@ -40,8 +42,13 @@ object Modules {
         const val firestore = "com.google.firebase:firebase-firestore-ktx"
     }
 
+    object Utils {
+        const val jodaTime = "joda-time:joda-time"
+    }
+
     object Test {
         const val junit = "junit:junit"
+        const val mockito = "org.mockito.kotlin:mockito-kotlin"
     }
 
     object AndroidTest {
@@ -73,8 +80,13 @@ object Dependencies {
         const val firestore = Modules.Firebase.firestore
     }
 
+    object Utils {
+        const val jodaTime = "${Modules.Utils.jodaTime}:${Versions.jodaTime}"
+    }
+
     object Test {
         const val junit = "${Modules.Test.junit}:${Versions.junit}"
+        const val mockito = "${Modules.Test.mockito}:${Versions.mockito}"
     }
 
     object AndroidTest {

@@ -67,6 +67,8 @@ dependencies {
     implementation(Dependencies.Firebase.firebaseStorage)
     implementation(Dependencies.Firebase.firestore)
 
+    implementation(Dependencies.Utils.jodaTime)
+
     testImplementation(Dependencies.Test.junit)
 
     androidTestImplementation(Dependencies.AndroidTest.androidJunit)
