@@ -1,8 +1,8 @@
 package xyz.shop.plan
 
-import xyz.shop.plan.data.CatalogProduct
-import xyz.shop.plan.data.ListedProduct
-import xyz.shop.plan.data.MeasureUnit
+import xyz.shop.plan.domain.CatalogProduct
+import xyz.shop.plan.domain.ListedProduct
+import xyz.shop.plan.domain.MeasureUnit
 
 object SampleCreator {
     fun createCatalogProduct(): CatalogProduct =

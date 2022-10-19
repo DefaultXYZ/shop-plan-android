@@ -1,4 +1,4 @@
-package xyz.shop.plan.data
+package xyz.shop.plan.domain
 
 import androidx.annotation.StringRes
 
