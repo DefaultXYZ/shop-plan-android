@@ -8,6 +8,7 @@ object Versions {
     const val navigationCompose = "2.5.2"
     const val firebase = "30.5.0"
     const val jodaTime = "2.12.0"
+    const val hilt = "2.44"
 
     // Tests
     const val junit = "4.13.2"
@@ -33,6 +34,11 @@ object Modules {
 
         const val uiTest = "androidx.compose.ui:ui-test-junit4"
         const val uiTooling = "androidx.compose.ui:ui-tooling"
+    }
+
+    object Hilt {
+        const val hilt = "com.google.dagger:hilt-android"
+        const val hiltCompiler = "com.google.dagger:hilt-android-compiler"
     }
 
     object Firebase {
@@ -71,6 +77,11 @@ object Dependencies {
         const val material = "${Modules.Compose.material}:${Versions.compose}"
         const val uiTest = "${Modules.Compose.uiTest}:${Versions.compose}"
         const val uiTooling = "${Modules.Compose.uiTooling}:${Versions.compose}"
+    }
+
+    object Hilt {
+        const val hilt = "${Modules.Hilt.hilt}:${Versions.hilt}"
+        const val hiltCompiler = "${Modules.Hilt.hiltCompiler}:${Versions.hilt}"
     }
 
     object Firebase {

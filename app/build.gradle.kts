@@ -2,6 +2,7 @@ plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlin)
     id(Plugins.kotlinKapt)
+    id(Plugins.hilt)
     id(Plugins.googleServices)
 }
 
@@ -57,6 +58,9 @@ dependencies {
     implementation(Dependencies.Android.activityCompose)
     implementation(Dependencies.Android.navigationCompose)
 
+    implementation(Dependencies.Hilt.hilt)
+    kapt(Dependencies.Hilt.hiltCompiler)
+
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.foundation)
     implementation(Dependencies.Compose.uiTooling)
@@ -74,4 +78,8 @@ dependencies {
     androidTestImplementation(Dependencies.AndroidTest.androidJunit)
     androidTestImplementation(Dependencies.AndroidTest.espresso)
     androidTestImplementation(Dependencies.Compose.uiTest)
+}
+
+kapt {
+    correctErrorTypes = true
 }
