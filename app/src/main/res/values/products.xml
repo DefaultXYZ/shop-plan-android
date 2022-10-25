@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="product_milk">Milk</string>
+    <string name="product_water">Water</string>
+    <string name="product_potato">Potato</string>
+    <string name="product_bread">Bread</string>
+</resources>
