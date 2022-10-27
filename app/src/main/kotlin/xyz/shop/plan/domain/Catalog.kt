@@ -2,6 +2,8 @@ package xyz.shop.plan.domain
 
 import androidx.annotation.StringRes
 import xyz.shop.plan.R
+import javax.inject.Inject
+import javax.inject.Singleton
 
 private val catalogItems = listOf(
     CatalogItem(
@@ -26,7 +28,8 @@ private val catalogItems = listOf(
     ),
 )
 
-object Catalog {
+@Singleton
+class Catalog @Inject constructor() {
     val items: List<CatalogProduct> = catalogItems.mapIndexed { index, catalogItem -> catalogItem.toCatalogProduct(index) }
 }
 

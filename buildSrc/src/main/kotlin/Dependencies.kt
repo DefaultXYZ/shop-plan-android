@@ -9,6 +9,8 @@ object Versions {
     const val firebase = "30.5.0"
     const val jodaTime = "2.12.0"
     const val hilt = "2.44"
+    const val hiltCompose = "1.0.0"
+    const val coroutines = "1.6.4"
 
     // Tests
     const val junit = "4.13.2"
@@ -27,6 +29,10 @@ object Modules {
         const val navigation = "androidx.navigation:navigation-compose"
     }
 
+    object Kotlin {
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android"
+    }
+
     object Compose {
         const val ui = "androidx.compose.ui:ui"
         const val foundation = "androidx.compose.foundation:foundation"
@@ -38,6 +44,7 @@ object Modules {
 
     object Hilt {
         const val hilt = "com.google.dagger:hilt-android"
+        const val hiltCompose = "androidx.hilt:hilt-navigation-compose"
         const val hiltCompiler = "com.google.dagger:hilt-android-compiler"
     }
 
@@ -71,6 +78,10 @@ object Dependencies {
         const val navigationCompose = "${Modules.Android.navigation}:${Versions.navigationCompose}"
     }
 
+    object Kotlin {
+        const val coroutines = "${Modules.Kotlin.coroutines}:${Versions.coroutines}"
+    }
+
     object Compose {
         const val ui = "${Modules.Compose.ui}:${Versions.compose}"
         const val foundation = "${Modules.Compose.foundation}:${Versions.compose}"
@@ -81,6 +92,7 @@ object Dependencies {
 
     object Hilt {
         const val hilt = "${Modules.Hilt.hilt}:${Versions.hilt}"
+        const val hiltCompose = "${Modules.Hilt.hiltCompose}:${Versions.hiltCompose}"
         const val hiltCompiler = "${Modules.Hilt.hiltCompiler}:${Versions.hilt}"
     }
 

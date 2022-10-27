@@ -58,7 +58,10 @@ dependencies {
     implementation(Dependencies.Android.activityCompose)
     implementation(Dependencies.Android.navigationCompose)
 
+    implementation(Dependencies.Kotlin.coroutines)
+
     implementation(Dependencies.Hilt.hilt)
+    implementation(Dependencies.Hilt.hiltCompose)
     kapt(Dependencies.Hilt.hiltCompiler)
 
     implementation(Dependencies.Compose.ui)
