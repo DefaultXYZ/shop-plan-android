@@ -1,4 +1,4 @@
-package xyz.shop.plan.presentation
+package xyz.shop.plan.presentation.profile
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
@@ -11,7 +11,8 @@ import xyz.shop.plan.R
 
 @Composable
 fun ProfileScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    viewModel: ProfileViewModel
 ) {
     Surface(
         modifier = modifier.fillMaxSize(),

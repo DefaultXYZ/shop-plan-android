@@ -1,4 +1,4 @@
-package xyz.shop.plan
+package xyz.shop.plan.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,9 +13,9 @@ import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import xyz.shop.plan.navigation.AsBottomBarScreen
 import xyz.shop.plan.navigation.AsToolbarScreen
-import xyz.shop.plan.presentation.AppNavigationHost
-import xyz.shop.plan.presentation.AppToolbar
-import xyz.shop.plan.presentation.BottomBar
+import xyz.shop.plan.presentation.navigation.AppNavigationHost
+import xyz.shop.plan.presentation.navigation.BottomBar
+import xyz.shop.plan.presentation.toolbar.AppToolbar
 import xyz.shop.plan.ui.theme.ShopPlanTheme
 
 @AndroidEntryPoint

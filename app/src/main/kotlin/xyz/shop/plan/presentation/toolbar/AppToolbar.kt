@@ -1,4 +1,4 @@
-package xyz.shop.plan.presentation
+package xyz.shop.plan.presentation.toolbar
 
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar

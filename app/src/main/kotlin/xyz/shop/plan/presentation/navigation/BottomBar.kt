@@ -1,4 +1,4 @@
-package xyz.shop.plan.presentation
+package xyz.shop.plan.presentation.navigation
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
