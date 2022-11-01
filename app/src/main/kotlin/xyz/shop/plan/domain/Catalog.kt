@@ -43,6 +43,6 @@ private fun CatalogItem.toCatalogProduct(index: Int): CatalogProduct =
     CatalogProduct(
         id = index,
         nameResId = nameResId,
-        imageUrl = "products/$imageUrl",
+        imageUrl = imageUrl,
         measureUnit = measureUnit
     )
