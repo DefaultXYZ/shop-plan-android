@@ -53,34 +53,34 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Android.core)
-    implementation(Dependencies.Android.lifecycleRuntime)
-    implementation(Dependencies.Android.activityCompose)
-    implementation(Dependencies.Android.navigationCompose)
+    implementation(Dependencies.androidCore)
+    implementation(Dependencies.lifecycleRuntime)
+    implementation(Dependencies.activityCompose)
+    implementation(Dependencies.navigationCompose)
 
-    implementation(Dependencies.Kotlin.coroutines)
+    implementation(Dependencies.coroutines)
 
-    implementation(Dependencies.Hilt.hilt)
-    implementation(Dependencies.Hilt.hiltCompose)
-    kapt(Dependencies.Hilt.hiltCompiler)
+    implementation(Dependencies.hilt)
+    implementation(Dependencies.hiltCompose)
+    kapt(Dependencies.hiltCompiler)
 
-    implementation(Dependencies.Compose.ui)
-    implementation(Dependencies.Compose.foundation)
-    implementation(Dependencies.Compose.uiTooling)
-    implementation(Dependencies.Compose.material)
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composeFoundation)
+    implementation(Dependencies.uiTooling)
+    implementation(Dependencies.composeMaterial)
 
-    implementation(platform(Dependencies.Firebase.firebaseBom))
-    implementation(Dependencies.Firebase.firebaseAuth)
-    implementation(Dependencies.Firebase.firebaseStorage)
-    implementation(Dependencies.Firebase.firestore)
+    implementation(platform(Dependencies.firebaseBom))
+    implementation(Dependencies.firebaseAuth)
+    implementation(Dependencies.firebaseStorage)
+    implementation(Dependencies.firestore)
 
-    implementation(Dependencies.Utils.jodaTime)
+    implementation(Dependencies.jodaTime)
 
-    testImplementation(Dependencies.Test.junit)
+    testImplementation(Dependencies.junit)
 
-    androidTestImplementation(Dependencies.AndroidTest.androidJunit)
-    androidTestImplementation(Dependencies.AndroidTest.espresso)
-    androidTestImplementation(Dependencies.Compose.uiTest)
+    androidTestImplementation(Dependencies.androidJunit)
+    androidTestImplementation(Dependencies.espresso)
+    androidTestImplementation(Dependencies.uiTest)
 }
 
 kapt {

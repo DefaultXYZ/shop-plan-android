@@ -21,99 +21,72 @@ object Versions {
     const val espresso = "3.4.0"
 }
 
-object Modules {
-    object Android {
-        const val core = "androidx.core:core-ktx"
-        const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx"
-        const val activityCompose = "androidx.activity:activity-compose"
-        const val navigation = "androidx.navigation:navigation-compose"
-    }
+private object Artifacts {
+    // Libraries
+    const val androidCore = "androidx.core:core-ktx"
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx"
+    const val activityCompose = "androidx.activity:activity-compose"
+    const val navigationCompose = "androidx.navigation:navigation-compose"
 
-    object Kotlin {
-        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android"
-    }
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android"
 
-    object Compose {
-        const val ui = "androidx.compose.ui:ui"
-        const val foundation = "androidx.compose.foundation:foundation"
-        const val material = "androidx.compose.material:material"
+    const val composeUi = "androidx.compose.ui:ui"
+    const val composeFoundation = "androidx.compose.foundation:foundation"
+    const val composeMaterial = "androidx.compose.material:material"
 
-        const val uiTest = "androidx.compose.ui:ui-test-junit4"
-        const val uiTooling = "androidx.compose.ui:ui-tooling"
-    }
+    const val hilt = "com.google.dagger:hilt-android"
+    const val hiltCompose = "androidx.hilt:hilt-navigation-compose"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler"
 
-    object Hilt {
-        const val hilt = "com.google.dagger:hilt-android"
-        const val hiltCompose = "androidx.hilt:hilt-navigation-compose"
-        const val hiltCompiler = "com.google.dagger:hilt-android-compiler"
-    }
+    const val firebaseBom = "com.google.firebase:firebase-bom"
+    const val firebaseAuth = "com.google.firebase:firebase-auth-ktx"
+    const val firebaseStorage = "com.google.firebase:firebase-storage-ktx"
+    const val firestore = "com.google.firebase:firebase-firestore-ktx"
 
-    object Firebase {
-        const val firebaseBom = "com.google.firebase:firebase-bom"
-        const val firebaseAuth = "com.google.firebase:firebase-auth-ktx"
-        const val firebaseStorage = "com.google.firebase:firebase-storage-ktx"
-        const val firestore = "com.google.firebase:firebase-firestore-ktx"
-    }
+    const val jodaTime = "joda-time:joda-time"
 
-    object Utils {
-        const val jodaTime = "joda-time:joda-time"
-    }
+    // Tests
+    const val junit = "junit:junit"
+    const val mockito = "org.mockito.kotlin:mockito-kotlin"
 
-    object Test {
-        const val junit = "junit:junit"
-        const val mockito = "org.mockito.kotlin:mockito-kotlin"
-    }
-
-    object AndroidTest {
-        const val androidJunit = "androidx.test.ext:junit"
-        const val espresso = "androidx.test.espresso:espresso-core"
-    }
+    // Android Tests
+    const val uiTest = "androidx.compose.ui:ui-test-junit4"
+    const val uiTooling = "androidx.compose.ui:ui-tooling"
+    const val androidJunit = "androidx.test.ext:junit"
+    const val espresso = "androidx.test.espresso:espresso-core"
 }
 
 object Dependencies {
-    object Android {
-        const val core = "${Modules.Android.core}:${Versions.core}"
-        const val lifecycleRuntime = "${Modules.Android.lifecycleRuntime}:${Versions.lifecycleRuntime}"
-        const val activityCompose = "${Modules.Android.activityCompose}:${Versions.activityCompose}"
-        const val navigationCompose = "${Modules.Android.navigation}:${Versions.navigationCompose}"
-    }
+    // Libraries
+    const val androidCore = "${Artifacts.androidCore}:${Versions.core}"
+    const val lifecycleRuntime = "${Artifacts.lifecycleRuntime}:${Versions.lifecycleRuntime}"
+    const val activityCompose = "${Artifacts.activityCompose}:${Versions.activityCompose}"
+    const val navigationCompose = "${Artifacts.navigationCompose}:${Versions.navigationCompose}"
 
-    object Kotlin {
-        const val coroutines = "${Modules.Kotlin.coroutines}:${Versions.coroutines}"
-    }
+    const val coroutines = "${Artifacts.coroutines}:${Versions.coroutines}"
 
-    object Compose {
-        const val ui = "${Modules.Compose.ui}:${Versions.compose}"
-        const val foundation = "${Modules.Compose.foundation}:${Versions.compose}"
-        const val material = "${Modules.Compose.material}:${Versions.compose}"
-        const val uiTest = "${Modules.Compose.uiTest}:${Versions.compose}"
-        const val uiTooling = "${Modules.Compose.uiTooling}:${Versions.compose}"
-    }
+    const val composeUi = "${Artifacts.composeUi}:${Versions.compose}"
+    const val composeFoundation = "${Artifacts.composeFoundation}:${Versions.compose}"
+    const val composeMaterial = "${Artifacts.composeMaterial}:${Versions.compose}"
 
-    object Hilt {
-        const val hilt = "${Modules.Hilt.hilt}:${Versions.hilt}"
-        const val hiltCompose = "${Modules.Hilt.hiltCompose}:${Versions.hiltCompose}"
-        const val hiltCompiler = "${Modules.Hilt.hiltCompiler}:${Versions.hilt}"
-    }
+    const val hilt = "${Artifacts.hilt}:${Versions.hilt}"
+    const val hiltCompose = "${Artifacts.hiltCompose}:${Versions.hiltCompose}"
+    const val hiltCompiler = "${Artifacts.hiltCompiler}:${Versions.hilt}"
 
-    object Firebase {
-        const val firebaseBom = "${Modules.Firebase.firebaseBom}:${Versions.firebase}"
-        const val firebaseAuth = Modules.Firebase.firebaseAuth
-        const val firebaseStorage = Modules.Firebase.firebaseStorage
-        const val firestore = Modules.Firebase.firestore
-    }
+    const val firebaseBom = "${Artifacts.firebaseBom}:${Versions.firebase}"
+    const val firebaseAuth = Artifacts.firebaseAuth
+    const val firebaseStorage = Artifacts.firebaseStorage
+    const val firestore = Artifacts.firestore
 
-    object Utils {
-        const val jodaTime = "${Modules.Utils.jodaTime}:${Versions.jodaTime}"
-    }
+    const val jodaTime = "${Artifacts.jodaTime}:${Versions.jodaTime}"
 
-    object Test {
-        const val junit = "${Modules.Test.junit}:${Versions.junit}"
-        const val mockito = "${Modules.Test.mockito}:${Versions.mockito}"
-    }
+    // Tests
+    const val junit = "${Artifacts.junit}:${Versions.junit}"
+    const val mockito = "${Artifacts.mockito}:${Versions.mockito}"
 
-    object AndroidTest {
-        const val androidJunit = "${Modules.AndroidTest.androidJunit}:${Versions.androidJunit}"
-        const val espresso = "${Modules.AndroidTest.espresso}:${Versions.espresso}"
-    }
+    // Android Tests
+    const val uiTest = "${Artifacts.uiTest}:${Versions.compose}"
+    const val uiTooling = "${Artifacts.uiTooling}:${Versions.compose}"
+    const val androidJunit = "${Artifacts.androidJunit}:${Versions.androidJunit}"
+    const val espresso = "${Artifacts.espresso}:${Versions.espresso}"
 }
