@@ -59,6 +59,7 @@ dependencies {
     implementation(Dependencies.navigationCompose)
 
     implementation(Dependencies.coroutines)
+    implementation(Dependencies.coroutinesPlayServices)
 
     implementation(Dependencies.hilt)
     implementation(Dependencies.hiltCompose)
@@ -68,6 +69,8 @@ dependencies {
     implementation(Dependencies.composeFoundation)
     implementation(Dependencies.uiTooling)
     implementation(Dependencies.composeMaterial)
+
+    implementation(Dependencies.coil)
 
     implementation(platform(Dependencies.firebaseBom))
     implementation(Dependencies.firebaseAuth)
