@@ -78,6 +78,7 @@ dependencies {
     implementation(Dependencies.firestore)
 
     implementation(Dependencies.jodaTime)
+    implementation(Dependencies.timber)
 
     testImplementation(Dependencies.junit)
 

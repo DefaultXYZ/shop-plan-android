@@ -5,6 +5,7 @@ object Versions {
     const val lifecycleRuntime = "2.5.1"
     const val activityCompose = "1.6.0"
     const val navigationCompose = "2.5.2"
+    const val coroutines = "1.6.4"
     const val compose = "1.2.1"
     const val composeCompiler = "1.3.2"
     const val coil = "2.2.2"
@@ -12,7 +13,7 @@ object Versions {
     const val hiltCompose = "1.0.0"
     const val firebase = "30.5.0"
     const val jodaTime = "2.12.0"
-    const val coroutines = "1.6.4"
+    const val timber = "5.0.1"
 
     // Tests
 
@@ -52,6 +53,7 @@ private object Artifacts {
     const val firestore = "com.google.firebase:firebase-firestore-ktx"
 
     const val jodaTime = "joda-time:joda-time"
+    const val timber = "com.jakewharton.timber:timber"
 
     // Tests
 
@@ -93,6 +95,7 @@ object Dependencies {
     const val firestore = Artifacts.firestore
 
     const val jodaTime = "${Artifacts.jodaTime}:${Versions.jodaTime}"
+    const val timber = "${Artifacts.timber}:${Versions.timber}"
 
     // Tests
 
