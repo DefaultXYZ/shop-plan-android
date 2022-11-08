@@ -25,7 +25,7 @@ fun AppNavigationHost(
         modifier = modifier
     ) {
         composable(NavScreen.Splash.route) {
-            SplashScreen {
+            SplashScreen(viewModel = hiltViewModel()) {
                 navController.navigate(NavScreen.NavMain.route) {
                     popUpTo(navController.graph.findStartDestination().id) {
                         inclusive = true
