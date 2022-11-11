@@ -17,11 +17,14 @@ import xyz.shop.plan.presentation.splash.SplashScreen
 @Composable
 fun AppNavigationHost(
     modifier: Modifier = Modifier,
+    viewModel: NavigationViewModel,
     navController: NavHostController
 ) {
+    val isUserLoggedIn = viewModel.isUserLoggedIn
+    val startDestination = if (isUserLoggedIn) NavScreen.NavMain.route else NavScreen.Splash.route
     NavHost(
         navController = navController,
-        startDestination = NavScreen.Splash.route,
+        startDestination = startDestination,
         modifier = modifier
     ) {
         composable(NavScreen.Splash.route) {

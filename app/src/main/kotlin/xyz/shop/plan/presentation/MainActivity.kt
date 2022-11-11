@@ -8,6 +8,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,6 +44,7 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
                     AppNavigationHost(
                         navController = navController,
+                        viewModel = hiltViewModel(),
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
