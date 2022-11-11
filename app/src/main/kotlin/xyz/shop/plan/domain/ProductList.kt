@@ -9,10 +9,6 @@ data class ProductList(
 ) {
     val basket: List<ListedProduct> get() = initialBasket
 
-    fun addToBasket(product: Product) {
-        initialBasket.add(ListedProduct.from(product))
-    }
-
     fun addToBasket(product: ListedProduct) {
         initialBasket.add(product)
     }
@@ -26,7 +22,7 @@ data class ProductList(
     }
 
     fun removeFromBasket(id: Int) {
-        initialBasket.removeAll { it.id == id }
+        initialBasket.removeAll { it.product.id == id }
     }
 
     fun removeFromBasketAtPosition(position: Int) {

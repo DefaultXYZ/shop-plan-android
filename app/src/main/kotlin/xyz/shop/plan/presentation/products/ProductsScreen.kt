@@ -15,6 +15,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import xyz.shop.plan.ui.nameResId
 
 @Composable
 fun ProductsScreen(
