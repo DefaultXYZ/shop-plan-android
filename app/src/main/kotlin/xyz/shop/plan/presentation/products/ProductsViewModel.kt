@@ -16,6 +16,6 @@ class ProductsViewModel @Inject constructor(
     val productItems: Flow<List<ProductsListItem>> = repository.getCatalogItems().map { items ->
         items.map {
             ProductsListItem(product = it, imageUrl = storageProvider.loadImageDownloadUrl(it.imageUrl))
-        }
+        }.sortedBy { it.product.name }
     }
 }
