@@ -6,4 +6,5 @@
     <string name="toolbar_plan_list">Your plan lists</string>
     <string name="toolbar_product_list">Product catalog</string>
     <string name="toolbar_profile">Profile</string>
+    <string name="plan_list_empty_content_text">No plans yet</string>
 </resources>

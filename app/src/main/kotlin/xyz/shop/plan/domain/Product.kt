@@ -1,5 +1,7 @@
 package xyz.shop.plan.domain
 
+import androidx.annotation.StringRes
+import xyz.shop.plan.R
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -14,6 +16,15 @@ enum class Product(
 
     val id: Int = ordinal
 }
+
+@get:StringRes
+val Product.nameResId: Int
+    get() = when (this) {
+        Product.Potato -> R.string.product_potato
+        Product.Milk -> R.string.product_milk
+        Product.Water -> R.string.product_water
+        Product.Bread -> R.string.product_bread
+    }
 
 @Singleton
 class Catalog @Inject constructor() {

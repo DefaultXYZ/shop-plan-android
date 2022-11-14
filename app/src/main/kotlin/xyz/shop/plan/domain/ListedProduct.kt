@@ -1,5 +1,8 @@
 package xyz.shop.plan.domain
 
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+
 data class ListedProduct(
     val product: Product,
     private var initialQuantity: Double = DEFAULT_QUANTITY
@@ -14,3 +17,6 @@ data class ListedProduct(
         private const val DEFAULT_QUANTITY = 1.0
     }
 }
+
+@Composable
+fun ListedProduct.provideTitle(): String = "${stringResource(product.nameResId)} x$quantity"
