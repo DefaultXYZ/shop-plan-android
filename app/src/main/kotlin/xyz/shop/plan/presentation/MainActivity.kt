@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -13,6 +15,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import xyz.shop.plan.navigation.AsBottomBarScreen
+import xyz.shop.plan.navigation.AsFloatingActionButtonScreen
 import xyz.shop.plan.navigation.AsToolbarScreen
 import xyz.shop.plan.presentation.navigation.AppNavigationHost
 import xyz.shop.plan.presentation.navigation.BottomBar
@@ -39,6 +42,15 @@ class MainActivity : ComponentActivity() {
                     bottomBar = {
                         destination?.AsBottomBarScreen {
                             BottomBar(navController = navController)
+                        }
+                    },
+                    floatingActionButton = {
+                        destination?.AsFloatingActionButtonScreen {
+                            FloatingActionButton(onClick = {
+                                navController.navigate(navigationScreen.route)
+                            }) {
+                                Icon(fabIcon, contentDescription = null)
+                            }
                         }
                     }
                 ) { innerPadding ->

@@ -5,10 +5,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavDestination
 import xyz.shop.plan.R
 import xyz.shop.plan.ui.BottomBarIcon
@@ -22,6 +24,10 @@ fun NavDestination.AsToolbarScreen(body: @Composable ToolbarScreen.() -> Unit) =
 @Composable
 fun NavDestination.AsBottomBarScreen(body: @Composable BottomBarScreen.() -> Unit) =
     (findScreen() as? BottomBarScreen)?.let { body(it) }
+
+@Composable
+fun NavDestination.AsFloatingActionButtonScreen(body: @Composable FloatingActionButtonScreen.() -> Unit) =
+    (findScreen() as? FloatingActionButtonScreen)?.let { body(it) }
 
 val screens = setOf(
     NavScreen.NavMain.PlanList,
@@ -59,7 +65,10 @@ sealed class NavScreen(
                 icon = Icons.Outlined.Edit,
                 selectedIcon = Icons.Filled.Edit
             )
-        )
+        ), FloatingActionButtonScreen {
+            override val navigationScreen: NavScreen = CreatePlan
+            override val fabIcon: ImageVector = Icons.Outlined.Add
+        }
 
         object ProductList : NavMain(
             route = NavPath.productList,
@@ -84,6 +93,8 @@ sealed class NavScreen(
 
     object Splash : NavScreen(NavPath.splash)
 
+    object CreatePlan : NavScreen(NavPath.createPlan)
+
     val route: String
         get() = listOfNotNull(navigationRoute, finalRoute).joinToString(separator = "")
 }
@@ -95,4 +106,9 @@ interface BottomBarScreen {
 
 interface ToolbarScreen {
     val toolbarTitleRes: Int
+}
+
+interface FloatingActionButtonScreen {
+    val fabIcon: ImageVector
+    val navigationScreen: NavScreen
 }
