@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import xyz.shop.plan.navigation.NavScreen
 import xyz.shop.plan.presentation.plan.PlanScreen
+import xyz.shop.plan.presentation.plan.create.CreatePlanScreen
 import xyz.shop.plan.presentation.products.ProductsScreen
 import xyz.shop.plan.presentation.profile.ProfileScreen
 import xyz.shop.plan.presentation.splash.SplashScreen
@@ -35,6 +36,10 @@ fun AppNavigationHost(
                     }
                 }
             }
+        }
+
+        composable(NavScreen.CreatePlan.route) {
+            CreatePlanScreen(viewModel = hiltViewModel())
         }
 
         navigation(

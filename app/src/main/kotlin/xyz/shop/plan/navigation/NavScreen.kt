@@ -33,7 +33,8 @@ val screens = setOf(
     NavScreen.NavMain.PlanList,
     NavScreen.NavMain.ProductList,
     NavScreen.NavMain.Profile,
-    NavScreen.Splash
+    NavScreen.Splash,
+    NavScreen.CreatePlan
 )
 
 val mainScreens = setOf(
@@ -93,7 +94,10 @@ sealed class NavScreen(
 
     object Splash : NavScreen(NavPath.splash)
 
-    object CreatePlan : NavScreen(NavPath.createPlan)
+    object CreatePlan : NavScreen(NavPath.createPlan), ToolbarScreen {
+        override val toolbarTitleRes: Int = R.string.toolbar_create_plan
+        override val displayNavigateUpIcon: Boolean = true
+    }
 
     val route: String
         get() = listOfNotNull(navigationRoute, finalRoute).joinToString(separator = "")
@@ -106,6 +110,8 @@ interface BottomBarScreen {
 
 interface ToolbarScreen {
     val toolbarTitleRes: Int
+    val displayNavigateUpIcon: Boolean
+        get() = false
 }
 
 interface FloatingActionButtonScreen {

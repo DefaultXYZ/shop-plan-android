@@ -36,7 +36,11 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     topBar = {
                         destination?.AsToolbarScreen {
-                            AppToolbar(stringResource(toolbarTitleRes))
+                            AppToolbar(
+                                title = stringResource(toolbarTitleRes),
+                                displayNavigateUpIcon = displayNavigateUpIcon,
+                                onNavigateUp = { navController.navigateUp() }
+                            )
                         }
                     },
                     bottomBar = {
