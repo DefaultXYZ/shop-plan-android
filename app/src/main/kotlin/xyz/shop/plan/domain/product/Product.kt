@@ -1,7 +1,8 @@
-package xyz.shop.plan.domain
+package xyz.shop.plan.domain.product
 
 import androidx.annotation.StringRes
 import xyz.shop.plan.R
+import xyz.shop.plan.domain.measure.MeasureUnit
 import javax.inject.Inject
 import javax.inject.Singleton
 

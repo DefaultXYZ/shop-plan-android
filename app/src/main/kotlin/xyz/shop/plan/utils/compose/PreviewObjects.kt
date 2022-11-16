@@ -1,8 +1,8 @@
 package xyz.shop.plan.utils.compose
 
-import xyz.shop.plan.domain.ListedProduct
-import xyz.shop.plan.domain.Plan
-import xyz.shop.plan.domain.Product
+import xyz.shop.plan.domain.plan.Plan
+import xyz.shop.plan.domain.product.ListedProduct
+import xyz.shop.plan.domain.product.Product
 import xyz.shop.plan.presentation.plan.PlanListItem
 import xyz.shop.plan.presentation.products.ProductsListItem
 

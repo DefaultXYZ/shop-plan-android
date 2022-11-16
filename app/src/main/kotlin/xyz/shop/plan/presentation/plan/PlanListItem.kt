@@ -2,9 +2,9 @@ package xyz.shop.plan.presentation.plan
 
 import androidx.compose.runtime.Composable
 import org.joda.time.DateTime
-import xyz.shop.plan.domain.ListedProduct
-import xyz.shop.plan.domain.Plan
-import xyz.shop.plan.domain.provideTitle
+import xyz.shop.plan.domain.plan.Plan
+import xyz.shop.plan.domain.product.ListedProduct
+import xyz.shop.plan.domain.product.provideTitle
 
 data class PlanListItem(
     val plan: Plan,

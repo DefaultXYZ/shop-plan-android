@@ -1,8 +1,11 @@
 package xyz.shop.plan.presentation.profile
 
-import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import xyz.shop.plan.base.BaseViewModel
+import xyz.shop.plan.utils.coroutines.AppDispatchers
 import javax.inject.Inject
 
 @HiltViewModel
-class ProfileViewModel @Inject constructor() : ViewModel()
+class ProfileViewModel @Inject constructor(
+    dispatchers: AppDispatchers
+) : BaseViewModel(dispatchers)

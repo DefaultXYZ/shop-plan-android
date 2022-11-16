@@ -1,6 +1,7 @@
-package xyz.shop.plan.domain
+package xyz.shop.plan.domain.plan
 
 import org.joda.time.DateTime
+import xyz.shop.plan.domain.product.ListedProduct
 
 data class Plan(
     val id: String,

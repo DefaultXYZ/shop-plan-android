@@ -1,4 +1,4 @@
-package xyz.shop.plan.domain
+package xyz.shop.plan.domain.product
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource

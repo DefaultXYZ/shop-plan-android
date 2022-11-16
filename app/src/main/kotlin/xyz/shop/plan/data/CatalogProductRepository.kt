@@ -2,8 +2,8 @@ package xyz.shop.plan.data
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import xyz.shop.plan.domain.Catalog
-import xyz.shop.plan.domain.Product
+import xyz.shop.plan.domain.product.Catalog
+import xyz.shop.plan.domain.product.Product
 import javax.inject.Inject
 
 class CatalogProductRepository @Inject constructor(

@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
 import xyz.shop.plan.R
-import xyz.shop.plan.domain.nameResId
+import xyz.shop.plan.domain.product.nameResId
 import xyz.shop.plan.extensions.PreviewContainer
 import xyz.shop.plan.utils.compose.PreviewObjects
 
