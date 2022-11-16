@@ -7,10 +7,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import xyz.shop.plan.extensions.withExceptionHandler
 import xyz.shop.plan.utils.coroutines.AppDispatchers
 import xyz.shop.plan.utils.firebase.FirebaseAuthProvider
+import xyz.shop.plan.utils.logging.logError
 import javax.inject.Inject
 
 @HiltViewModel
@@ -23,7 +23,7 @@ class SplashViewModel @Inject constructor(
 
     fun signInAnonymously() {
         viewModelScope.launch(dispatchers.background.withExceptionHandler { exception ->
-            Timber.e(exception)
+            logError(exception)
             signInStatus = SignInStatus.Failed(exception)
         }) {
             signInStatus = if (!firebaseAuthProvider.isUserLoggedIn()) {
