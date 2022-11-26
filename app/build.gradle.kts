@@ -70,6 +70,8 @@ dependencies {
     implementation(Dependencies.uiTooling)
     implementation(Dependencies.composeMaterial)
 
+    implementation(Dependencies.accompanistSystemUi)
+
     implementation(Dependencies.coil)
 
     implementation(platform(Dependencies.firebaseBom))

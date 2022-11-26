@@ -8,6 +8,7 @@ object Versions {
     const val coroutines = "1.6.4"
     const val compose = "1.3.1"
     const val composeCompiler = "1.3.2"
+    const val accompanist = "0.27.1"
     const val coil = "2.2.2"
     const val hilt = "2.44.2"
     const val hiltCompose = "1.0.0"
@@ -40,6 +41,8 @@ private object Artifacts {
     const val composeUi = "androidx.compose.ui:ui"
     const val composeFoundation = "androidx.compose.foundation:foundation"
     const val composeMaterial = "androidx.compose.material:material"
+
+    const val accompanistSystemUi = "com.google.accompanist:accompanist-systemuicontroller"
 
     const val coil = "io.coil-kt:coil-compose"
 
@@ -82,6 +85,8 @@ object Dependencies {
     const val composeUi = "${Artifacts.composeUi}:${Versions.compose}"
     const val composeFoundation = "${Artifacts.composeFoundation}:${Versions.compose}"
     const val composeMaterial = "${Artifacts.composeMaterial}:${Versions.compose}"
+
+    const val accompanistSystemUi = "${Artifacts.accompanistSystemUi}:${Versions.accompanist}"
 
     const val coil = "${Artifacts.coil}:${Versions.coil}"
 
