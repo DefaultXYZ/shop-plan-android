@@ -9,6 +9,8 @@ val Green400 = Color(0xFF66BB6A)
 val Green800 = Color(0xFF2E7D32)
 val Yellow200 = Color(0xFFFFF59D)
 
+val SystemBarColor = Green800
+
 val DarkColorPalette = darkColors(
     primary = Green200,
     primaryVariant = Green800,

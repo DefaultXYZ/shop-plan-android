@@ -13,6 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
 import xyz.shop.plan.navigation.AsBottomBarScreen
 import xyz.shop.plan.navigation.AsFloatingActionButtonScreen
@@ -21,14 +22,19 @@ import xyz.shop.plan.presentation.navigation.AppNavigationHost
 import xyz.shop.plan.presentation.navigation.BottomBar
 import xyz.shop.plan.presentation.toolbar.AppToolbar
 import xyz.shop.plan.ui.theme.ShopPlanTheme
+import xyz.shop.plan.ui.theme.SystemBarColor
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
+            val systemUiController = rememberSystemUiController()
             val navController = rememberNavController()
+
+            systemUiController.setSystemBarsColor(SystemBarColor)
 
             val backStackEntryState by navController.currentBackStackEntryAsState()
             val destination = backStackEntryState?.destination
