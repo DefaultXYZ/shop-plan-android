@@ -1,8 +1,22 @@
 package xyz.shop.plan.ui.theme
 
+import androidx.compose.material.darkColors
+import androidx.compose.material.lightColors
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val Green200 = Color(0xFFA5D6A7)
+val Green400 = Color(0xFF66BB6A)
+val Green800 = Color(0xFF2E7D32)
+val Yellow200 = Color(0xFFFFF59D)
+
+val DarkColorPalette = darkColors(
+    primary = Green200,
+    primaryVariant = Green800,
+    secondary = Yellow200
+)
+
+val LightColorPalette = lightColors(
+    primary = Green400,
+    primaryVariant = Green800,
+    secondary = Yellow200
+)
