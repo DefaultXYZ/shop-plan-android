@@ -3,16 +3,16 @@ object Versions {
 
     const val androidCore = "1.9.0"
     const val lifecycleRuntime = "2.5.1"
-    const val activityCompose = "1.6.0"
-    const val navigationCompose = "2.5.2"
+    const val activityCompose = "1.6.1"
+    const val navigationCompose = "2.5.3"
     const val coroutines = "1.6.4"
-    const val compose = "1.2.1"
+    const val compose = "1.3.1"
     const val composeCompiler = "1.3.2"
     const val coil = "2.2.2"
-    const val hilt = "2.44"
+    const val hilt = "2.44.2"
     const val hiltCompose = "1.0.0"
-    const val firebase = "30.5.0"
-    const val jodaTime = "2.12.0"
+    const val firebase = "31.1.0"
+    const val jodaTime = "2.12.1"
     const val timber = "5.0.1"
 
     // Tests
@@ -22,7 +22,7 @@ object Versions {
 
     // Android Tests
 
-    const val androidJunit = "1.1.3"
+    const val androidJunit = "1.1.4"
     const val espresso = "3.4.0"
 }
 
